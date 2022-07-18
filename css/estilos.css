@@ -1,4 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth; }
+  
+  
 body {
     color: white;
     background-color: whitesmoke;
 }
+
+a{
+  text-decoration: solid;
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+p{
+  text-decoration: solid;
+  color: black;
+}
+
+H1{
+  font-family: 'Bebas Neue',cursive;
+  font-family: 'Koulen',cursive;
+}
+
+h2{
+color: #000000
+;
+}
+
+
+
+
+.formulario {
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    position: relative; }
+  
+  .formulario__titulo {
+    text-align: center;
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.7); }
+  
+  .formulario__input, .formulario__label, .formulario__submit {
+    display: block;
+    width: 100%;
+    font-size: 1.3em; }
+  
+  .formulario__input {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px; }
+  
+  .formulario__input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.7); }
+  
+  .formulario__input:focus + .formulario__label {
+    margin-top: -135px; }
+  
+  .formulario__label {
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -85px;
+    z-index: -20;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s; }
+  
+  .formulario__submit {
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none; }
+
+
+    /* Comienzo header */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); }
+
+        header nav {
+            width: 50%;
+            margin-right: 20px; }
+    
+            header .header__logo {
+            height: 20rem;
+            width: 20rem;
+            }
+            
+            header .header__logo img {
+            width: 100%;
+            }
+    
+        header .header__menu {
+            width: 100%; }
+    
+        header .header__menu ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%; }
+    
+        header .header__menu ul li {
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 5px;
+            padding: 0.5rem;
+            display: inline-block;
+            margin: 0 0.5rem;
+            animation: bounce;
+            animation-duration: 2s; }
+    
+
+    /* FIN HEADER */
+
+    footer {
+        height: 8rem;
+        background-color: #0093E9;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+      
+     footer .Footer__Contacto {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+     
+    footer .Footer__Contacto a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        width: 4rem;
+        height: 4rem;
+        color: white;
+        border-radius: 50%;
+    }
+    
+    /* Fin Footer */
+
+    /* comienzo botones */
+
+button {
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+    background-size: 800% 400%;
+    padding: 1em 2em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+
+button:hover {
+animation: gradient 3s infinite;
+transform: scale(1.05);
+}
+
+button:active {
+animation: gradient 3s infinite;
+transform: scale(0.8);
+}
+
+@keyframes gradient {
+0% {
+    background-position: 0% 50%;
+}
+
+50% {
+    background-position: 100% 50%;
+}
+
+100% {
+    background-position: 0% 50%;
+}
+}
+
+/* fin botones */
+
+/* comienzo productos */
+.cart{
+width: 80%;
+margin: auto;
+padding: 20px;
+background: white;
+}
+
+.car-img{
+width:80px;
+height:80px;
+margin:10px;
+}
+
+
+.producto-carrito{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+font-style: black;
+}
+
+.product-details{
+    font-weight: bold;
+    color: black;
+}
+.total-carrito{
+display: flex;
+justify-content: center;
+}
+.total{
+color: #000000;
+font-size: 1.5rem;
+font-weight: 600;
+}
+
+/* fin productos */  
+
+
+/* Comienzo ubicacion */
+.main_card{
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  justify-content: space-between;
+  
+  }
+  .contenedor
+  {   
+      display: flex;
+      width: 1024px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      height: 500px;
+  }
+  
+  .ubicacion{
+      background: #9a9eab;
+      height: 500px;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-right: 10px;
+  }
+  
+  .p-horario {
+  color: black;
+  font-weight: bold;
+      }
+          
+  .mapa{
+  width: 100%;
+  height: 500px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+      }
+  
+  /* fin ubicacion */
+
+  /* nosotros */
+
+  .fijar {
+    margin-top: -135px; }
+
+.about-section {
+    position: relative;
+    padding: 120px 0px; }
+
+.about-section .content-column {
+    position: relative;
+    margin-bottom: 40px; }
+
+.about-section .content-column .inner-column {
+    position: relative;
+    padding-top: 50px;
+    padding-right: 100px; }
+
+.about-section .content-column .text {
+    position: relative;
+    color: #777777;
+    font-size: 15px;
+    line-height: 2em;
+    margin-bottom: 40px; }
+
+.about-section .content-column .email {
+    position: relative;
+    color: #252525;
+    font-weight: 700;
+    margin-bottom: 50px; }
+
+.about-section .image-column {
+    position: relative;
+    margin-bottom: 50px; }
+
+.about-section .image-column .inner-column {
+    position: relative;
+    padding: 40px 40px 0px 0px;
+    margin-left: 50px; }
+
+.about-section .image-column .inner-column:after {
+    position: absolute;
+    content: '';
+    right: 0px;
+    top: 0px;
+    left: 40px;
+    bottom: 100px;
+    z-index: -1;
+    border: 2px solid black; }
+
+.about-section .image-column .inner-column .image {
+    position: relative; }
+
+.about-section .image-column .inner-column .image:before {
+    position: absolute;
+    content: '';
+    left: -50px;
+    bottom: -50px;
+    width: 299px;
+    height: 299px; }
+
+.about-section .image-column .inner-column .image img {
+    position: relative;
+    width: 100%;
+    display: block; }
+
+.about-section .image-column .inner-column .image .overlay-box {
+    position: absolute;
+    left: 40px;
+    bottom: 90px; }
+
+.about-section .image-column .inner-column .image .overlay-box .year-box .number {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 110px;
+    height: 110px;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 105px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #000000; }
+
+.about-section .btn-style-three:before {
+    position: absolute;
+    content: '';
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+    right: -10px;
+    bottom: -10px;
+    background: url(https://i.ibb.co/DKn55Qz/pattern-1.jpg) repeat; }
+
+
+.about-section .btn-style-three {
+    position: relative;
+    line-height: 24px;
+    color: #252525;
+    font-size: 15px;
+    font-weight: 700;
+    background: none;
+    display: inline-block;
+    padding: 11px 40px;
+    background-color: #ffffff;
+    text-transform: capitalize;
+    border: 2px solid black;
+    font-family: 'Arimo', sans-serif; }
+
+.sec-title2 {
+    color: #fff; }
+
+.sec-title {
+    position: relative;
+    padding-bottom: 40px; }
+
+.sec-title .title {
+    position: relative;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    padding-right: 50px;
+    margin-bottom: 15px;
+    display: inline-block;
+    text-transform: capitalize; }
+
+.sec-title .title:before {
+    position: absolute;
+    content: '';
+    right: 0px;
+    bottom: 7px;
+    width: 40px;
+    height: 1px;
+    background-color: #bbbbbb; }
+
+/* fin nosotros */

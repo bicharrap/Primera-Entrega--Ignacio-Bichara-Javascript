@@ -41,3 +41,24 @@ alert(" ¡Gracias por tu compra!, en breve te llegara un correo de confirmación
 
 
 
+
+//teclado
+
+let input1 = document.getElementById("nombre y apellido")
+let input2 = document.getElementById("Correo")
+let input3 = document.getElementById("Telefono")
+let input4 = document.getElementById("mensaje")
+
+
+//Enviar
+
+let miFormulario = document.getElementById("formulario");
+miFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e){
+    e.preventDefault();
+    console.log("Formulario Enviado");    
+}
+
+
+
