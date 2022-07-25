@@ -139,9 +139,56 @@ dibujarCarrito()
 const finalizarCompra = () =>{
 const total = document.getElementsByClassName ("total") [0].innerHTML;
 modalCarrito.innerHTML ="";
-const compraFinalizada=
+const compraFinalizada=`<div class="compra-finalizada"><p class="compra-parrafo">Ya casi es tuya la compra, el${total}</p>
+<div class="datos-cliente">
+<p class="datos-parrafo"> Complete el formulario para coordinar la entrega</p>
+<button class= "btn btn-info formulario" id= "formulario" onClick="dibujarFormulario()">Formulario</button>
+</div>`;
 modalCarrito.innerHTML= compraFinalizada;
 };
+
+//formulario de finalizar compra
+
+const dibujarFormulario = () => {
+    modalCarrito.innerHTML ="";
+    const formulario =`
+    <h2> Contacto</h2>
+    <div class="contact__section-container">
+    <div class="row">
+    <div class="contact__section__item">
+    <label>nombre y apellido</label>
+    <input type= "text" id= "nombre y apellido" placeholder= "nombre y apellido"/>
+    </div>
+    <div class="contact__section__item">
+    <label>Email</label>
+    <input type= "text" id= "mail" placeholder= "Email"/>
+    </div>
+    <div class="contact__section__item">
+    <label>Telefono</label>
+    <input type= "text" id= "telefono" placeholder= "telefono"/>
+    </div>
+    <div class="contact__section__item">
+    <label>Domicilio</label>
+    <input type= "text" id= "Domicilio" placeholder= "Domicilio"/>
+    </div>
+    <div class ="contact-button">
+        <button type= "button" class= btn btn-info envio" onClick="mostrarMensaje()">Confirmar</button> 
+    </div>
+    </div>
+    </div>`;
+    modalCarrito.innerHTML = formulario;
+    };
+
+const mostrarMensaje=() =>{
+const nombreyapellidoCliente = document.getElementById("nombre y apellido").value;
+const domicilioCliente = document.getElementById ("Domicilio").value;
+modalCarrito.innerHTML ="";
+let mensaje = `<div class= "mensaje-final"> Gracias ${nombreyapellidoCliente } por tu compra, en 48 hs recibiras tu paquete en ${domicilioCliente}
+</div>`;
+modalCarrito.innerHTML = mensaje;
+};
+
+    
 
 const actualizarStorage = ()=>{
     localStorage.setItem("cart",JSON.stringify(cart))
